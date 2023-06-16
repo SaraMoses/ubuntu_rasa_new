@@ -1,0 +1,321 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet_mal
+  - action: utter_greet_mal
+  - intent: bot_answer_mal
+  - action: utter_bot_answer_mal
+  - intent: writer_chart_insert
+  - action: utter_writer_chart_insert
+  - intent: thanks
+  - action: utter_thanks
+  - intent: rate_pos
+  - action: utter_thanks_final
+
+
+- story: sad path 
+  steps:
+  - intent: greet_mal
+  - action: utter_greet_mal
+  - intent: bot_answer_mal
+  - action: utter_bot_answer_mal
+  - intent: writer_chart_insert
+  - action: utter_writer_chart_insert
+  - intent: thanks
+  - action: utter_thanks
+  - intent: rate_neg
+  - action: utter_suggestions
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: text_format
+  steps: 
+  - intent: text_format
+  - action: utter_text_format
+
+- story: page_format_style
+  steps: 
+  - intent: page_format_style
+  - action: utter_page_format_style
+
+- story: header_writer
+  steps: 
+  - intent: header_writer
+  - action: utter_header_writer
+
+- story: footer_writer
+  steps: 
+  - intent: footer_writer
+  - action: utter_footer_writer
+
+- story: page_margin
+  steps: 
+  - intent: page_margin
+  - action: utter_page_margin
+
+- story: page_border
+  steps: 
+  - intent: page_border
+  - action: utter_page_border
+
+- story: index_table
+  steps: 
+  - intent: index_table
+  - action: utter_index_table
+
+
+- story: bullets_numbers
+  steps: 
+  - intent: bullets_numbers
+  - action: utter_bullets_numbers
+
+
+- story: find_replace
+  steps: 
+  - intent: find_replace
+  - action: utter_find_replace
+
+
+- story: mail_merge
+  steps: 
+  - intent:  mail_merge
+  - action: utter_mail_merge
+
+
+- story: para_align
+  steps: 
+  - intent:  para_align
+  - action: utter_para_align
+
+- story: hyperlink
+  steps: 
+  - intent: hyperlink
+  - action: utter_hyperlink
+ 
+- story: row_insert
+  steps: 
+  - intent:  row_insert
+  - action: utter_row_insert
+ 
+- story: column_insert
+  steps: 
+  - intent:  column_insert
+  - action: utter_column_insert
+
+- story: row_delete
+  steps: 
+  - intent:  row_delete
+  - action: utter_row_delete
+
+- story: column_delete
+  steps: 
+  - intent:  column_delete
+  - action: utter_column_delete
+
+- story: table_delete
+  steps: 
+  - intent:  table_delete
+  - action: utter_table_delete
+
+- story: sort_calc
+  steps: 
+  - intent:  sort_calc
+  - action: utter_sort_calc
+
+- story: function_calc
+  steps: 
+  - intent:  function_calc
+  - action: utter_function_calc
+
+- story: calc_sheet_protection
+  steps: 
+  - intent:  calc_sheet_protection
+  - action: utter_calc_sheet_protection
+
+- story: calc_freeze
+  steps: 
+  - intent:  calc_freeze
+  - action: utter_calc_freeze
+
+- story: calc_comment
+  steps: 
+  - intent:  calc_comment
+  - action: utter_calc_comment
+
+- story: calc_head_comment
+  steps: 
+  - intent:  calc_head_comment
+  - action: utter_calc_head_comment
+
+- story: calc_edit_comment
+  steps: 
+  - intent:  calc_edit_comment
+  - action: utter_calc_edit_comment
+
+- story: calc_delete_comment
+  steps: 
+  - intent:  calc_delete_comment
+  - action: utter_calc_delete_comment
+
+- story: calc_filter
+  steps: 
+  - intent:   calc_filter
+  - action: utter_calc_filter
+
+
+- story: calc_std_filter
+  steps: 
+  - intent:   calc_std_filter
+  - action: utter_calc_std_filter
+
+- story: pivot_table_calc
+  steps: 
+  - intent:   pivot_table_calc
+  - action: utter_pivot_table_calc
+
+- story: pagebreak_calc
+  steps: 
+  - intent:   pagebreak_calc
+  - action: utter_pagebreak_calc
+
+- story: pagebreak_remove
+  steps: 
+  - intent:   pagebreak_remove
+  - action: utter_pagebreak_remove
+
+- story: ubuntu_os
+  steps: 
+  - intent:   ubuntu_os
+  - action: utter_ubuntu_os
+
+- story: impress_textbox
+  steps: 
+  - intent:   impress_textbox
+  - action: utter_impress_textbox
+
+- story: impress_slideshow
+  steps: 
+  - intent:   impress_slideshow
+  - action: utter_impress_slideshow
+
+
+- story: impress_animation
+  steps: 
+  - intent:   impress_animation
+  - action: utter_impress_animation
+
+- story: greet_mal
+  steps: 
+  - intent:   greet_mal
+  - action: utter_greet_mal
+
+- story: ubundu_font_install
+  steps: 
+  - intent:  ubundu_font_install
+  - action: utter_font_install
+
+- story: swanalekha
+  steps: 
+  - intent:  swanalekha
+  - action: utter_swanalekha
+
+- story: thanks
+  steps: 
+  - intent: thanks
+  - action: utter_confirms
+
+- story: positive
+  steps: 
+  - intent: confirm_positive
+  - action: utter_thanks
+
+
+- story: negative
+  steps: 
+  - intent: confirm_negative
+  - action: utter_re_ask
+
+- story: unknown_answer
+  steps:
+  - intent: unknown_answer
+  - action: utter_please_rephrase
+
+- story: bot
+  steps:
+  - intent: bot_answer_mal
+  - action: utter_bot_answer_mal
+
+- story: impress
+  steps:
+  - intent: impress
+  - action: utter_impress
+
+- story: calc
+  steps:
+  - intent: calc
+  - action: utter_calc
+
+- story: writer_chart_insert
+  steps:
+  - intent: writer_chart_insert
+  - action: utter_writer_chart_insert
+
+- story: writer_image_insert
+  steps:
+  - intent: writer_image_insert
+  - action: utter_writer_image_insert
+
+- story: writer_table_insert
+  steps:
+  - intent: writer_table_insert
+  - action: utter_writer_table_insert
+
+- story: pdf_conversion
+  steps:
+  - intent: pdf_conversion
+  - action: utter_pdf_conversion
+
+
+#ar
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  
+  - intent: doc_index
+  - action: utter_doc_index
+
+- story: confQ path
+  steps:
+  - intent: endnote
+  - action: utter_endnote
+  - intent: footnote
+  - action: utter_footnote
+  - intent: letter_arrange
+  - action: utter_letter_arrange
+  - intent: char_highlight
+  - action: utter_char_highlight
+ 
